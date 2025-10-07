@@ -19,4 +19,6 @@
     
     $conexao->query($insert);
 
+    header('Location:index.php');
+
 ?>
