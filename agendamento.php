@@ -11,10 +11,10 @@
             <input type="text" class="form-control mb-2" name="servico" placeholder="Corte, Barba, Pacote">
         </div>
         <div class="col-2">
-            <input type="date" class="form-control mb-2" name="dia" placeholder="__/__/__">
+            <input type="date" class="form-control mb-2" name="dia">
         </div>
         <div class="col-2">
-            <input type="time" class="form-control mb-2" name="hora" placeholder="__:__">
+            <input type="time" class="form-control mb-2" name="hora">
         </div>
         <div class="col-2">
             <input type="text" class="form-control mb-2" name="status" placeholder="Status:">

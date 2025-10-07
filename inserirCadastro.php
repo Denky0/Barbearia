@@ -13,12 +13,10 @@
     echo "<br>";
     echo $funcao;
 
-    if ($funcao == 'cliente') {
-        $insert = "INSERT INTO cliente VALUES ('$nome', '$telefone', '$funcao')";
-    } elseif ($funcao == 'barbeiro') {
-        $insert = "INSERT INTO barbeiro VALUES ('$nome', '$telefone', '$funcao')";
-    } else {
-        echo "Deu merda ae";
+    if ($funcao === 'cliente' || $funcao === 'barbeiro') {
+        $insert = "INSERT INTO pessoa (nome, telefone, funcao) VALUES ('$nome', '$telefone', '$funcao')";
     }
+    
+    $conexao->query($insert);
 
 ?>
