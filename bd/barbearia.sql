@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3307
--- Tempo de geração: 07/10/2025 às 21:27
+-- Tempo de geração: 07/10/2025 às 22:21
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -40,27 +40,14 @@ CREATE TABLE `agendamento` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `barbeiro`
+-- Estrutura para tabela `pessoa`
 --
 
-CREATE TABLE `barbeiro` (
-  `nome` varchar(32) NOT NULL,
-  `telefone` int(11) NOT NULL,
+CREATE TABLE `pessoa` (
   `id` int(11) NOT NULL,
-  `funcao` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Estrutura para tabela `cliente`
---
-
-CREATE TABLE `cliente` (
   `nome` varchar(32) NOT NULL,
-  `id` int(32) NOT NULL,
-  `telefone` int(11) NOT NULL,
-  `funcao` varchar(32) NOT NULL
+  `telefone` varchar(32) NOT NULL,
+  `funcao` enum('cliente','barbeiro') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -74,15 +61,9 @@ ALTER TABLE `agendamento`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- Índices de tabela `barbeiro`
+-- Índices de tabela `pessoa`
 --
-ALTER TABLE `barbeiro`
-  ADD PRIMARY KEY (`id`);
-
---
--- Índices de tabela `cliente`
---
-ALTER TABLE `cliente`
+ALTER TABLE `pessoa`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -96,16 +77,10 @@ ALTER TABLE `agendamento`
   MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `barbeiro`
+-- AUTO_INCREMENT de tabela `pessoa`
 --
-ALTER TABLE `barbeiro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `cliente`
---
-ALTER TABLE `cliente`
-  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `pessoa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
