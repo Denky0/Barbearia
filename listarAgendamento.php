@@ -13,7 +13,11 @@
                 <p class='card-text'>Barbeiro: $agendamento->cliente</p>
                 <p class='card-text'>Cliente: $agendamento->barbeiro</p>
                 <p class='card-text'>Serviço: $agendamento->servico</p>
+                <p class='card-text'>Horário: $agendamento->hora</p>
+                <p class='card-text'>Dia: $agendamento->dia</p>
                 <p class='card-text'>Status: $agendamento->status</p>
+                <a href='editar.php?codigo=$agendamento->codigo' class='btn btn-success btn-sm'>Editar</a>
+                <a href='delete.php?codigo=$agendamento->codigo' class='btn btn-danger btn-sm'>Excluir</a>
                 </div>
             </div>";
     }else{
