@@ -12,11 +12,7 @@
 <body class="bg-primary-subtle">
     <nav class="navbar navbar-expand-lg bg-body-tertiary primary">
         <div class="container-fluid">
-<<<<<<< HEAD
             <a class="navbar-brand" href="index.php">BarberTech</a>
-=======
-            <a class="navbar-brand" href="#">BarberTech</a>
->>>>>>> baf1a3036d3a04a93c934fba7628e5740117f122
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
