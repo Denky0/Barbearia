@@ -2,27 +2,22 @@
 
 include "conexao.php";
 
-$cliente =  $conexao->query("SELECT * FROM pessoa WHERE funcao = 'cliente'");
-$barbeiro =  $conexao->query("SELECT * FROM pessoa WHERE funcao = 'barbeiro'");
-$servico =  $conexao->query("SELECT * FROM agendamento");
-$dia =  $conexao->query("SELECT * FROM agendamento");
-$status =  $conexao->query("SELECT * FROM agendamento");
-$hora =  $conexao->query("SELECT * FROM agendamento");
+$cliente = $conexao->query("SELECT * FROM pessoa WHERE funcao = 'cliente'");
+$barbeiro = $conexao->query("SELECT * FROM pessoa WHERE funcao = 'barbeiro'");
+$agendamentos = $conexao->query("SELECT * FROM agendamento");
+$pessoas = $conexao->query("SELECT * FROM pessoa");
 
 ?>
 
 <h1>Gerenciamento</h1>
 <table class="table table-light table-striped">
     <thead>
-        <tr>
-            <th scope="col">BARBEIRO</th>
-            <th scope="col">CLIENTE</th>
-            <th scope="col">SERVIÇO</th>
-            <th scope="col">DATA/HORA</th>
-            <th scope="col">STATUS</th>
-            <th scope="col">AÇÔES</th>
-        </tr>
+        <th scope="col">NOME</th>
+        <th scope="col">FUNÇÂO</th>
+        <th scope="col">TELEFONE</th>
+        <th scope="col">AÇÔES</th>
     </thead>
+<<<<<<< HEAD
 
     <tr class="table-active">
         <td>
@@ -67,4 +62,35 @@ $hora =  $conexao->query("SELECT * FROM agendamento");
             </a>
         </td>
     </tr>
+=======
+    <tbody>
+
+        <?php
+        if ($pessoas->num_rows > 0) {
+            while ($pessoa = $pessoas->fetch_object()) {
+                echo "
+                    <tr>
+                        <td>
+                            $pessoa->nome
+                        </td>
+                        <td>
+                            $pessoa->funcao
+                        </td>
+                        <td>
+                            $pessoa->telefone
+                        </td>
+                        <td>
+                            <a href='editarP.php?codigo=$pessoa->id' class='btn btn-success btn-sm'>Editar</a>
+                            <a href='deleteP.php?id=$pessoa->id' class='btn btn-danger btn-sm'>Excluir</a>
+                        </td>
+                    </tr>
+                ";
+            }
+        }
+
+
+        ?>
+
+    </tbody>
+>>>>>>> 132afec0157f3a62d49d6e6e0b1b87ee872270ef
 </table>

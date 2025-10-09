@@ -2,6 +2,7 @@
     
     include 'conexao.php';
 
+    $codigo = $_GET['codigo'];
     $servico = $_GET['servico'];
     $dia = $_GET['dia'];
     $status = $_GET['status'];
@@ -22,7 +23,7 @@
     echo "<br>";
     echo $hora;
 
-    $insert = "INSERT INTO agendamento (servico, dia, status, barbeiro, cliente, hora) VALUES('$servico', '$dia', '$status', '$barbeiro', '$cliente', '$hora')";
+    $insert = "INSERT INTO agendamento (codigo, servico, dia, status, barbeiro, cliente, hora) VALUES('', '$servico', '$dia', '$status', '$barbeiro', '$cliente', '$hora')";
 
     $conexao->query($insert);
 
