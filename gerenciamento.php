@@ -23,7 +23,7 @@ $hora =  $conexao->query("SELECT * FROM agendamento");
             <th scope="col">AÇÔES</th>
         </tr>
     </thead>
-    
+
     <tr class="table-active">
         <td>
             <?php
@@ -62,7 +62,9 @@ $hora =  $conexao->query("SELECT * FROM agendamento");
         </td>
         <td>
             <button class="btn btn-success btn-sm">Editar</button>
-            <button class="btn btn-danger btn-sm">Excluir</button>
+            <a class="btn btn-danger btn-sm" href='delete.php?codigo=$agendamento->codigo'>
+                <p class='card-text'>Deletar</p>
+            </a>
         </td>
     </tr>
 </table>

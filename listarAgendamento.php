@@ -12,6 +12,8 @@
         <h5 class='card-text'>$agendamento->codigo</h5>
         <p class='card-text'>$agendamento->servico</p>
         <p class='card-text'>$agendamento->status</p>
+        <p class='card-text'>$agendamento->hora</p>
+        <p class='card-text'>$agendamento->dia</p>
         </div>
     </div>"
 
