@@ -17,55 +17,9 @@ $pessoas = $conexao->query("SELECT * FROM pessoa");
         <th scope="col">TELEFONE</th>
         <th scope="col">AÇÔES</th>
     </thead>
-<<<<<<< HEAD
-
-    <tr class="table-active">
-        <td>
-            <?php
-            while ($pessoa = $barbeiro->fetch_object()) {
-                echo "<p>$pessoa->nome</p>";
-            }
-            ?>
-        </td>
-        <td>
-            <?php
-            while ($pessoa = $cliente->fetch_object()) {
-                echo "<p>$pessoa->nome</p>";
-            }
-            ?>
-        </td>
-        <td>
-            <?php
-            while ($agendamento = $servico->fetch_object()) {
-                echo "<p>$agendamento->servico</p>";
-            }
-            ?>
-        </td>
-        <td>
-            <?php
-            while ($agendamento = $dia->fetch_object()) {
-                echo "<p>$agendamento->dia</p>";
-            }
-            ?>
-        </td>
-        <td>
-            <?php
-            while ($agendamento = $status->fetch_object()) {
-                echo "<p>$agendamento->status</p>";
-            }
-            ?>
-        </td>
-        <td>
-            <button class="btn btn-success btn-sm">Editar</button>
-            <a class="btn btn-danger btn-sm" href='delete.php?codigo=$agendamento->codigo'>
-                <p class='card-text'>Deletar</p>
-            </a>
-        </td>
-    </tr>
-=======
     <tbody>
-
         <?php
+
         if ($pessoas->num_rows > 0) {
             while ($pessoa = $pessoas->fetch_object()) {
                 echo "
@@ -92,5 +46,4 @@ $pessoas = $conexao->query("SELECT * FROM pessoa");
         ?>
 
     </tbody>
->>>>>>> 132afec0157f3a62d49d6e6e0b1b87ee872270ef
 </table>
